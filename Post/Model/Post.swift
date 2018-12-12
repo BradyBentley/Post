@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct Post: Codable {
+    // MARK: - Properties
+    let text: String
+    let timestamp: TimeInterval
+    let username: String
+    
+    // MARK: - Initializers
+    init(text: String, timestamp: TimeInterval = Date().timeIntervalSince1970, username: String) {
+        self.text = text
+        self.timestamp = timestamp
+        self.username = username
+    }
+}
